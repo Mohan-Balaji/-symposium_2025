@@ -29,7 +29,7 @@ const Scrollport = () => {
                         }}
                         style={{ backgroundImage: `url(${card.image})` }}
                     >
-                        <div className="card-content">
+                      RegistrationForm  <div className="card-content">
                             <p>{card.text}</p>
                         </div>
                     </div>
