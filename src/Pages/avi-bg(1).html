@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UFO Cursor with Starry Background</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            overflow: hidden;
+            background: linear-gradient(to right, #430d4b , #210535);
+            height: 100vh;
+            width: 100vw;
+            position: relative;
+            cursor: none; /* Hide default cursor */
+            font-family: "Poppins", sans-serif;
+        }
+
+        /* Transparent Navbar */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 30px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            color: white;
+            font-size: 20px;
+            z-index: 1000;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #ff5733;
+        }
+
+        .star {
+            position: absolute;
+            background: white;
+            border-radius: 50%;
+            opacity: 0.8;
+            transition: transform 0.3s ease-out;
+        }
+
+        /* Warp Drive Animation */
+        .warp {
+            position: absolute;
+            width: 2px;
+            height: 20px;
+            background: white;
+            opacity: 0.8;
+            transition: all 0.5s linear;
+        }
+
+        /* UFO Image Cursor */
+        .ufo {
+            position: absolute;
+            width: 60px;
+            height: auto;
+            pointer-events: none;
+            transition: transform 0.1s linear;
+        }
+
+        /* Main Heading */
+        h1 {
+            position: absolute;
+            top: 45%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #ff5733;
+            text-align: center;
+            font-size: 70px;
+            cursor: pointer;
+            z-index: 2;
+        }
+
+        /* Subtitle Below Avinya */
+        #subtitle {
+            position: absolute;
+            top: 55%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 20px;
+            color: white;
+            text-align: center;
+            max-width: 600px;
+            z-index: 2;
+            font-family: Copperplate, Papyrus, fantasy;
+        }
+
+        /* Fullscreen Warp Effect */
+        .warp-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: black;
+            display: none;
+            z-index: 10000;
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- Transparent Navbar -->
+    <nav class="navbar">
+        <div class="logo">AVINYA 2025</div>
+        <div class="nav-links">
+            <a href="#">Home</a>
+            <a href="#">Events</a>
+            <a href="#">Bus Route</a>
+        </div>
+    </nav>
+
+    <!-- UFO Cursor (PNG Image) -->
+    <img src="C:\Users\yerra\Downloads\pngtree-ufo-cartoon-ufo-alien-spaceship-png-image_4721568-removebg-preview.png" alt="UFO Cursor" class="ufo" id="ufo">
+    
+    <h1 id="title">Avinya</h1>
+    <p id="subtitle">Explore endless possibilities in technical and non-technical events. <br>Click on Avinya to start the journey.</p>
+
+    <!-- Warp Animation Container -->
+    <div class="warp-screen" id="warp-screen"></div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const starCount = 300; 
+            const stars = [];
+            const body = document.body;
+            const ufo = document.getElementById("ufo");
+            const warpScreen = document.getElementById("warp-screen");
+            const title = document.getElementById("title");
+
+            // Create stars
+            for (let i = 0; i < starCount; i++) {
+                let star = document.createElement("div");
+                let size = Math.random() * 3 + 1; 
+                star.classList.add("star");
+                star.style.width = `${size}px`;
+                star.style.height = `${size}px`;
+                star.style.top = `${Math.random() * window.innerHeight}px`;
+                star.style.left = `${Math.random() * window.innerWidth}px`;
+                body.appendChild(star);
+                stars.push({ element: star, parallax: Math.random() * 15 + 5 }); 
+            }
+
+            // Handle UFO movement & parallax effect
+            document.addEventListener("mousemove", (e) => {
+                let { clientX: x, clientY: y } = e;
+                let centerX = window.innerWidth / 2;
+                let centerY = window.innerHeight / 2;
+
+                // Move UFO smoothly
+                ufo.style.transform = `translate(${x - 30}px, ${y - 15}px)`;
+
+                // Parallax effect for stars
+                stars.forEach(starObj => {
+                    let { element, parallax } = starObj;
+                    let moveX = (x - centerX) / parallax;
+                    let moveY = (y - centerY) / parallax;
+                    element.style.transform = `translate(${moveX}px, ${moveY}px)`;
+                });
+            });
+
+            // Click event for "Avinya" to trigger warp animation
+            title.addEventListener("click", () => {
+                warpScreen.style.display = "block";
+                warpScreen.innerHTML = "";
+
+                let warpInterval = setInterval(() => {
+                    for (let i = 0; i < 200; i++) {
+                        let warpLine = document.createElement("div");
+                        warpLine.classList.add("warp");
+                        let x = Math.random() * window.innerWidth;
+                        let y = Math.random() * window.innerHeight;
+                        warpLine.style.left = `${x}px`;
+                        warpLine.style.top = `${y}px`;
+                        warpScreen.appendChild(warpLine);
+
+                        setTimeout(() => {
+                            warpLine.style.height = "100vh";
+                            warpLine.style.width = "3px";
+                            warpLine.style.opacity = "0";
+                            warpLine.style.transform = `translateY(-${window.innerHeight}px)`;
+                        }, 10);
+                    }
+                }, 500); 
+
+                setTimeout(() => {
+                    clearInterval(warpInterval);
+                    window.location.href = "#events"; 
+                }, 5000);
+            });
+
+        });
+    </script>
+</body>
+</html>
