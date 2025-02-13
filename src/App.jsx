@@ -1,14 +1,15 @@
-import { useState } from 'react'
-import Technical_Reg_form from './Components/Technical_Reg_form'
+// import { useState } from 'react'
 import './App.css'
-
+import TCardList from './Components/Events/Technical/TCardList';
+// import Tech_cards from './Components/Events/Technical/Tech_cards';
+import Stars from './Components/Events/Technical/ui/Stars';
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
-      <Technical_Reg_form/>
-    </>
+    <Stars/>
+    <TCardList></TCardList>
+   </>
   )
 }
 
