@@ -1,7 +1,9 @@
 import React from "react";
-
+import Background from "../Components/Background/Background";
 export default function Contact() {
   return (
+    <>
+    <Background/>
     <div className="container mx-auto p-8">
       <div className="text-center mb-8">
         <h1 className="text-2xl font-bold">R.M.D. Engineering College</h1>
@@ -26,5 +28,6 @@ export default function Contact() {
         <p>For Queries: <a href="mailto:avinyaa@rmd.ac.in" className="text-blue-600 hover:underline">upcomming@rmd.ac.in</a></p>
       </div>
     </div>
+  </>
   );
 }
