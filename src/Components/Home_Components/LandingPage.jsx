@@ -12,7 +12,7 @@ const LandingPage = () => {
     document.body.appendChild(renderer.domElement);
 
     // Star Settings
-    const particleCount = 20000;
+    const particleCount = 5000;
     const particles = new THREE.BufferGeometry();
     const positions = new Float32Array(particleCount * 3);
     const colors = new Float32Array(particleCount * 3);
@@ -98,16 +98,23 @@ const LandingPage = () => {
   return (
     <div>
 
+      {/* College Name */}
+      <div className="college-name flex flex-auto justify-center">R.M.D. ENGINEERING COLLEGE</div>
+      <div className="department flex justify-center">Department of &nbsp; <span className="highlight"> ARTIFICIAL INTELLIGENCE AND MACHINE LEARNING</span></div>
+      <div className="presents flex justify-center">Presents</div>
+
       {/* Centered AVINYA Text */}
-      <div className="title" onClick={exploreGalaxy}>AVINYAA<sup className="sup-text">25</sup></div>
+      <div className="title flex-auto justify-center" onClick={exploreGalaxy}>
+        AVINYAA<sup className="sup-text">'25</sup>
+      </div>
 
       {/* Spaceman Floating */}
-      <img
+      {/* <img
         className="spaceman"
         src={heroimg}
         alt="Spaceman"
       />
-      <div className="dialog">Click on AVINYAA<sup>25</sup> to explore!</div>
+      <div className="dialog">Click on AVINYAA<sup>25</sup> to explore!</div> */}
     </div>
   );
 };

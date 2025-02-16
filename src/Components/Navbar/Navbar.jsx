@@ -17,7 +17,7 @@ export default function Navbar() {
   }, []);
 
   return (
-    <nav className="bg-white/10 backdrop-blur-lg border-gray-200 font-[Lato] relative z-50">
+    <nav className="bg-white/10 backdrop-blur-ls border-gray-200 font-[Lato] relative z-50">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <a href="https://nextjs-avinya-dkyf.vercel.app/" className="flex items-center space-x-3 rtl:space-x-reverse">
           <h1 className="text-4xl text-gray-200">
@@ -38,13 +38,18 @@ export default function Navbar() {
         <div className={`${isOpen ? "block" : "hidden"} w-full md:block md:w-auto`}>
           <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 borderounded-lg bg-transparent md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-transparent">
             <li>
-              <a href="#" className="block py-2 px-3 text-gray-200 rounded-sm hover:bg-purple-700 md:hover:bg-transparent md:border-0 md:hover:text-blue-300 md:p-0">
+              <a href="/" className="block py-2 px-3 text-gray-200 rounded-sm hover:bg-purple-700 md:hover:bg-transparent md:border-0 md:hover:text-blue-300 md:p-0">
                 Home
               </a>
             </li>
             <li>
-              <a href="#" className="block py-2 px-3 text-gray-200 rounded-sm hover:bg-purple-700 md:hover:bg-transparent md:border-0 md:hover:text-blue-300 md:p-0">
+              <a href="/events" className="block py-2 px-3 text-gray-200 rounded-sm hover:bg-purple-700 md:hover:bg-transparent md:border-0 md:hover:text-blue-300 md:p-0">
                 Events
+              </a>
+            </li>
+            <li>
+              <a href="/registration" className="block py-2 px-3 text-gray-200 rounded-sm hover:bg-purple-700 md:hover:bg-transparent md:border-0 md:hover:text-blue-300 md:p-0">
+                Register
               </a>
             </li>
             <li>
@@ -52,8 +57,9 @@ export default function Navbar() {
                 Bus Routes
               </a>
             </li>
+           
             <li>
-              <a href="#" className="block py-2 px-3 text-gray-200 rounded-sm hover:bg-purple-700 md:hover:bg-transparent md:border-0 md:hover:text-blue-300 md:p-0">
+              <a href="/contact" className="block py-2 px-3 text-gray-200 rounded-sm hover:bg-purple-700 md:hover:bg-transparent md:border-0 md:hover:text-blue-300 md:p-0">
                 Contact
               </a>
             </li>
