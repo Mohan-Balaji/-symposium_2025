@@ -7,6 +7,7 @@ import LandingPage from './Components/Home_Components/LandingPage'
 // import Background from './Components/Background/Background';
 import RegistrationForm from "./Components/Registration_Form/RegistrationForm"
 import Contact from './Pages/Contact';
+import SuccessPage from './Components/Registration_Form/Registration_Success/SuccessPage';
 function App() {
 
   return (
@@ -15,7 +16,7 @@ function App() {
   //   {/* <LandingPage/> }
   //   <TCardList/> */}
 
-
+  
   //  </>
     <BrowserRouter>
     <Navbar></Navbar>
@@ -24,6 +25,8 @@ function App() {
       <Route path="/events" element={<TCardList/>}></Route>
       <Route path="/registration" element={<RegistrationForm/>}></Route>
       <Route path="/contact" element={<Contact/>}></Route>
+      <Route path="/success" element={<SuccessPage/>}></Route>
+
     </Routes>
     </BrowserRouter>
   )

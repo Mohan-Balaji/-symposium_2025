@@ -33,12 +33,12 @@ export default function RegistrationForm() {
   };
 
   const whatsappLinks = {
-    "1": "https://chat.whatsapp.com/event1",
+    "1": "https://chat.whatsapp.com/Jmup91uysqWL7YzdMxvHhd",
     "2": "https://chat.whatsapp.com/event2",
-    "3": "https://chat.whatsapp.com/event3",
-    "4": "https://chat.whatsapp.com/event4",
-    "5": "https://chat.whatsapp.com/event5",
-    "6": "https://chat.whatsapp.com/event6",
+    "3": "https://chat.whatsapp.com/BtUSCnhW5xvDaN4A9cO0VN",
+    "4": "https://chat.whatsapp.com/LAveuuImGEOEPjjGgKyAC5",
+    "5": "https://chat.whatsapp.com/Gm9AeQd6qDLHH4Dh7tYXCq",
+    "6": "https://chat.whatsapp.com/HIreB8b8ZBwCOvzFFZO2xT",
   };
 
   const handleChange = (e) => {
@@ -157,7 +157,7 @@ export default function RegistrationForm() {
                   ))}
                 </>
               )}
-
+              
               <button type="submit" className="w-full bg-blue-500 text-white p-2 rounded hover:bg-blue-600">Register</button>
             </form>
           </div>
