@@ -1,0 +1,67 @@
+<div className="min-h-screen font-[Remaining] text-3xl flex items-center justify-center bg-cover bg-center" style={{ backgroundImage: "url('/mnt/data/image.png')" }}>
+      <div className="max-w-md w-full p-6 bg-white/10 backdrop-blur-lg shadow-2xl rounded-xl border border-white/20">
+        <h2 className="text-white text-5xl mb-4 text-center">Event Registration</h2>
+        
+       
+
+        <form onSubmit={handleSubmit}>
+          <input type="text" name="name" value={formData.name} onChange={handleChange} placeholder="Student Name" required className="w-full p-2 mb-2 border rounded bg-white/20 text-white placeholder-white" />
+          <input type="text" name="college" value={formData.college} onChange={handleChange} placeholder="College Name" required className="w-full p-2 mb-2 border rounded bg-white/20 text-white placeholder-white" />
+          <input type="text" name="whatsapp" value={formData.whatsapp} onChange={handleChange} placeholder="WhatsApp Number" required className="w-full p-2 mb-2 border rounded bg-white/20 text-white placeholder-white" />
+          <input type="email" name="email" value={formData.email} onChange={handleChange} placeholder="Email" required className="w-full p-2 mb-2 border rounded bg-white/20 text-white placeholder-white" />
+          
+          <label className="block mb-2 text-white">Select Event:
+          {formData.event && (
+          <p className="text-sm text-blue-300 mb-2 text-center">
+            Join the <strong>{eventNames[formData.event]}</strong> WhatsApp group:  
+            <a 
+              href={whatsappLinks[formData.event]} 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="underline ml-1"
+            >
+              Click Here
+            </a>
+          </p>
+        )}
+          </label>
+          <select name="event" value={formData.event} onChange={handleChange} className="w-full p-2 mb-2 border rounded bg-white/20 text-black">
+            <option value="1">Code Heist</option>
+            <option value="2">Blind Coding</option>
+            <option value="3">Logo Designing (Team Only)</option>
+            <option value="4">ML-Based (Team Only)</option>
+            <option value="5">VALORANT (Team Only)</option>
+            <option value="6">GAMEO (Team Only)</option>
+          </select>
+          
+          {!["1", "2"].includes(formData.event) && (
+            <>
+              <label className="block mb-2 text-white">Participation Type:</label>
+              <select name="participationType" value={formData.participationType} onChange={handleChange} className="w-full p-2 mb-2 border rounded bg-white/20 text-black">
+                <option value="solo">Solo</option>
+                <option value="team">Team</option>
+              </select>
+            </>
+          )}
+
+          {formData.participationType === "team" && ["3", "4", "5", "6"].includes(formData.event) && (
+            <>
+              <input type="text" name="teamName" value={formData.teamName} onChange={handleChange} placeholder="Team Name" required className="w-full p-2 mb-2 border rounded bg-white/20 text-white placeholder-white" />
+              {formData.teamMembers.slice(0, formData.event === "5" ? 5 : 4).map((member, index) => (
+                <input
+                  key={index}
+                  type="text"
+                  placeholder={`Team Member ${index + 1} Name`}
+                  value={formData.teamMembers[index] || ""}
+                  onChange={(e) => handleTeamMemberChange(index, e.target.value)}
+                  className="w-full p-2 mb-2 border rounded bg-white/20 text-white placeholder-white"
+                  required={index < (formData.event === "5" ? 4 : 3)}
+                />
+              ))}
+            </>
+          )}
+          
+          <button type="submit" className="w-full bg-blue-500 text-white p-2 rounded hover:bg-blue-600">Register</button>
+        </form>
+      </div>
+    </div>

@@ -5,6 +5,14 @@
     font-weight: 900;
     src: local('Lato'), url(./assets/fonts/avinyaa.otf) format('opentype');
 }
+
+@font-face {
+    font-family: 'Remaining';
+    font-weight: 900;
+    src: local('Remaining'), url(./assets/fonts/Remaining.otf) format('opentype');
+}
+
+
 /* @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap'); */
 .sup-text {
     font-size: 86px;
@@ -57,6 +65,19 @@ canvas {
     width: 25%;
     animation: float 3s ease-in-out infinite;
 }
+
+.title-card {
+    background: linear-gradient(135deg, #ff7eb3, #ff758c);
+    color: white;
+    padding: 30px 50px;
+    text-align: center;
+    font-size: 2rem;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 300px;
+    margin: 50px auto;
+    transition: all 0.3s ease-in-out;
+  }
 
 @keyframes float {
     0% { transform: translateY(0); }

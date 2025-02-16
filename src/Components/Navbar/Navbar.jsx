@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-// import navimg from "../../assets/avinyaa.png";
+import { Link } from "react-router-dom"; // Import Link from react-router-dom
 import busRoute_PDF from "../../assets/Bus_Routes/rmdbus.pdf";
 import "../../assets/fonts/avinyaa.otf";
 
@@ -17,13 +17,13 @@ export default function Navbar() {
   }, []);
 
   return (
-    <nav className="bg-white/10 backdrop-blur-lg border-gray-200 font-[Lato] relative z-50">
+    <nav className="font-[Lato] relative z-50">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-        <a href="https://nextjs-avinya-dkyf.vercel.app/" className="flex items-center space-x-3 rtl:space-x-reverse">
+        <Link to="/" className="flex items-center space-x-3 rtl:space-x-reverse">
           <h1 className="text-4xl text-gray-200">
             AVINYAA<sup className="align-super text-sm">25</sup>
           </h1>
-        </a>
+        </Link>
         <button
           onClick={() => setIsOpen(!isOpen)}
           type="button"
@@ -35,17 +35,22 @@ export default function Navbar() {
             <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M1 1h15M1 7h15M1 13h15" />
           </svg>
         </button>
-        <div className={`${isOpen ? "block" : "hidden"} w-full md:block md:w-auto`}>
+        <div className={`${isOpen ? "block" : "hidden"} w-full md:block md:w-auto font-[Remaining] text-4xl`} >
           <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 borderounded-lg bg-transparent md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-transparent">
             <li>
-              <a href="#" className="block py-2 px-3 text-gray-200 rounded-sm hover:bg-purple-700 md:hover:bg-transparent md:border-0 md:hover:text-blue-300 md:p-0">
+            <Link to="/" className="block py-2 px-3 text-gray-200 rounded-sm hover:bg-purple-700 md:hover:bg-transparent md:border-0 md:hover:text-blue-300 md:p-0">
                 Home
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#" className="block py-2 px-3 text-gray-200 rounded-sm hover:bg-purple-700 md:hover:bg-transparent md:border-0 md:hover:text-blue-300 md:p-0">
+              <Link to="/events" className="block py-2 px-3 text-gray-200 rounded-sm hover:bg-purple-700 md:hover:bg-transparent md:border-0 md:hover:text-blue-300 md:p-0">
                 Events
-              </a>
+              </Link>
+            </li>
+            <li>
+              <Link to="/registration" className="block py-2 px-3 text-gray-200 rounded-sm hover:bg-purple-700 md:hover:bg-transparent md:border-0 md:hover:text-blue-300 md:p-0">
+                Register
+              </Link>
             </li>
             <li>
               <a href={busRoute_PDF} target="_blank" className="block py-2 px-3 text-gray-200 rounded-sm hover:bg-purple-700 md:hover:bg-transparent md:border-0 md:hover:text-blue-300 md:p-0">
@@ -53,9 +58,14 @@ export default function Navbar() {
               </a>
             </li>
             <li>
-              <a href="#" className="block py-2 px-3 text-gray-200 rounded-sm hover:bg-purple-700 md:hover:bg-transparent md:border-0 md:hover:text-blue-300 md:p-0">
+              <Link to="/contact" className="block py-2 px-3 text-gray-200 rounded-sm hover:bg-purple-700 md:hover:bg-transparent md:border-0 md:hover:text-blue-300 md:p-0">
                 Contact
-              </a>
+              </Link>
+            </li>
+            <li>
+              <Link to="/aboutus" className="block py-2 px-3 text-gray-200 rounded-sm hover:bg-purple-700 md:hover:bg-transparent md:border-0 md:hover:text-blue-300 md:p-0">
+                Abouts
+              </Link>
             </li>
           </ul>
         </div>

@@ -11,7 +11,7 @@ const Background = () => {
     document.body.appendChild(renderer.domElement);
 
     // Star Settings
-    const particleCount = 20000;
+    const particleCount = 7000;
     const particles = new THREE.BufferGeometry();
     const positions = new Float32Array(particleCount * 3);
     const colors = new Float32Array(particleCount * 3);

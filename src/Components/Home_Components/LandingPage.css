@@ -8,7 +8,7 @@
 body {
     margin: 0;
     overflow: hidden;
-    background: radial-gradient(circle at center, #8b1e3f, #2e1a47);
+    background: radial-gradient(circle at center, #8b1e3f , #2e1a47);
     height: 100vh;
     font-family: 'Lato';
 }
@@ -26,10 +26,10 @@ canvas {
 .title {
     z-index: 10;
     position: absolute;
-    top: 30%;
-    left: 50%;
+    top:55%;
+    left: 52.3%;
     transform: translate(-50%, -50%);
-    font-size: 180px;
+    font-size: 150px;
     font-weight: bold;
     color: white;
     text-shadow: 0 0 30px rgba(255, 255, 255, 0.9);
@@ -38,9 +38,45 @@ canvas {
 }
 
 .title:hover {
-    color: #ffdd57;
-    text-shadow: 0 0 40px rgba(255, 221, 87, 1);
+    color: #64b5f6;
+    text-shadow: 0 0 40px rgba(168,66,150) ;
 }
+
+
+/* College Name */
+.college-name {
+    font-size: 100px;
+    font-weight: bold;
+    color: white;
+    text-transform: uppercase;
+    z-index: 2;
+    font-family:'Remaining';
+
+
+}
+
+/* Department */
+.department {
+    font-size: 45px;
+    color: white;
+    z-index: 2;
+    font-family:'Remaining'
+   
+}
+
+.department .highlight {
+    color: #ffd700;
+}
+
+/* Presents */
+.presents {
+    font-size: 18px;
+    color: white;
+    z-index: 2;
+    
+    
+}
+
 
 .spaceman {
     position: absolute;
