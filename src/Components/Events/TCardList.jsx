@@ -1,6 +1,7 @@
 import React from "react";
 import TCard from "./TCard"; // Import TCard component
 import Background from "../Background/Background";
+import Footer from "../Footer/Footer";
 
 const TCardList = () => {
   const cards1 = [
@@ -72,6 +73,7 @@ const TCardList = () => {
         </div>
 
       </div>
+      <Footer/>
     </div>
   );
 };

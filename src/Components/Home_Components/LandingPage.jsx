@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import * as THREE from "three";
 import "./LandingPage.css"; // Include the CSS for styling
 import heroimg from "../../assets/heroimg.png";
+import Footer from "../Footer/Footer";
 const LandingPage = () => {
   useEffect(() => {
     const scene = new THREE.Scene();
@@ -96,6 +97,12 @@ const LandingPage = () => {
   };
 
   return (
+    <div className="w-full h-screen overflow-y-auto z-10 relative">
+      <div className="flex flex-col items-center min-h-screen w-full z-10 relative mx-auto ">
+      <div
+          className="bg-cover bg-center"
+          style={{ backgroundImage: "url('/mnt/data/image.png')" }}
+        >
     <div>
 
       {/* College Name */}
@@ -104,7 +111,7 @@ const LandingPage = () => {
       <div className="presents flex justify-center">Presents</div>
 
       {/* Centered AVINYA Text */}
-      <div className="title flex-auto justify-center" onClick={exploreGalaxy}>
+      <div className="title flex-autojustify-center" onClick={exploreGalaxy}>
         AVINYAA<sup className="sup-text">'25</sup>
       </div>
 
@@ -115,7 +122,13 @@ const LandingPage = () => {
         alt="Spaceman"
       />
       <div className="dialog">Click on AVINYAA<sup>25</sup> to explore!</div> */}
+     
+     
+      </div>
+      </div>
     </div>
+    <Footer/>
+  </div>
   );
 };
 
