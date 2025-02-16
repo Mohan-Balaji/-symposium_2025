@@ -142,6 +142,10 @@ canvas {
 }
 
 @media (max-width: 480px) {
+    .college-name{
+        top: 10%;
+        font-size: 50%;
+        }
     .title {
         font-size: 75px;
          /* Increase font size for small screens */

@@ -26,7 +26,7 @@ export default function RegistrationForm() {
   const eventNames = {
     "1": "Code Heist",
     "2": "Blind Coding",
-    "3": "Logo Designing",
+    "3": "DesignX",
     "4": "ML-Based",
     "5": "VALORANT",
     "6": "GAMEO",
