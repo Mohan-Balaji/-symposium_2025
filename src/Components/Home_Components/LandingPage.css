@@ -26,7 +26,7 @@ canvas {
 .title {
     z-index: 10;
     position: absolute;
-    top:55%;
+    top:45%;
     left: 52.3%;
     transform: translate(-50%, -50%);
     font-size: 150px;
@@ -37,10 +37,10 @@ canvas {
     transition: 0.3s;
 }
 
-.title:hover {
+/* .title:hover {
     color: #ffd700;
-    text-shadow: 0 0 40px rgba(255,215,0) ;
-}
+    text-shadow: 0 0 40px rgb(240, 240, 239) ;
+} */
 
 .department {
     font-size: 45px;
@@ -54,6 +54,9 @@ canvas {
     color: #ffd700;
 }
 
+.highlight{
+    color: #ffd700;
+}
 
 
 
@@ -95,7 +98,7 @@ canvas {
     }
     .sup-text {
         font-size: 32px; /* Adjust for mobile screens */
-        top: -10px
+        top: 10px
       }
 
       .spaceman {
@@ -128,7 +131,7 @@ canvas {
     .title {
         font-size: 75px;
          /* Increase font size for small screens */
-        top: 45%;         /* Center the title vertically */
+        top: 40%;         /* Center the title vertically */
     }
     .sup-text {
         font-size: 32px; /* Adjust for mobile screens */

@@ -3,6 +3,8 @@ import * as THREE from "three";
 import "./LandingPage.css"; // Include the CSS for styling
 import heroimg from "../../assets/heroimg.png";
 import Footer from "../Footer/Footer";
+import CountDown from "./Countdown";
+
 const LandingPage = () => {
   useEffect(() => {
     const scene = new THREE.Scene();
@@ -97,28 +99,35 @@ const LandingPage = () => {
   };
 
   return (
-    <div className="w-full h-screen overflow-y-auto z-10 relative">
-      <div className="flex flex-col items-center min-h-screen w-full z-10 relative mx-auto ">
-      <div
-          className="bg-cover bg-center"
-          style={{ backgroundImage: "url('/mnt/data/image.png')" }}
-        >
-    <div>
+    <div className="flex flex-col container items-center justify-center">
+      <div className="w-full h-screen overflow-y-auto z-10 relative">
+        <div className="flex flex-col items-center min-h-screen w-full z-10 relative mx-auto ">
+          <div
+            className="bg-cover bg-center"
+            style={{ backgroundImage: "url('/mnt/data/image.png')" }}
+          >
+            <div>
 
-      {/* College Name */}
-      <div className="flex flex-auto justify-center sm:text-[100px] font-bold text-white uppercase z-20 font-[remaining] text-[50px]">R.M.D. ENGINEERING COLLEGE</div>
-      <div className="sm:text-[45px] text-white z-20 font-[remaining] flex justify-center text-[27px] p-3">Department of &nbsp; <span className="highlight"> ARTIFICIAL INTELLIGENCE AND MACHINE LEARNING</span></div>
-      <div className="sm:text-[18px] text-white z-20 flex justify-center p-10">Presents</div>
+              {/* College Name */}
+              <div className="flex flex-auto justify-center sm:text-[50px] font-bold text-white uppercase z-20 font-[titleBold] text-[20px]">R.M.D. ENGINEERING COLLEGE</div>
+              <div className="sm:text-[45px] text-white z-20 font-[remaining] flex justify-center text-[27px] p-3">Department of &nbsp; <span className="highlight"> ARTIFICIAL INTELLIGENCE AND MACHINE LEARNING</span></div>
+              <div className="sm:text-[18px] text-white z-20 flex justify-center p-5">Presents</div>
 
-      {/* Centered AVINYA Text */}
-      <div className="title flex-autojustify-center" onClick={exploreGalaxy}>
-        AVINYAA<sup className="sup-text">'25</sup>
-      </div>     
-      </div>
+              {/* Centered AVINYA Text */}
+              <div className="title flex-auto justify-center " onClick={exploreGalaxy}>
+                AVINYAA<sup className="sup-text">'25</sup>
+              </div>
+
+              <div className="mt-60">
+                <CountDown />
+              </div>
+
+            </div>
+          </div>
+        </div>
+        <Footer />
       </div>
     </div>
-    <Footer/>
-  </div>
   );
 };
 
