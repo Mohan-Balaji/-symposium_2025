@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import * as THREE from "three";
 import "./LandingPage.css"; // Include the CSS for styling
-import heroimg from "../../assets/heroimg.png";
+// import heroimg from "../../assets/heroimg.png";
 import Footer from "../Footer/Footer";
 import CountDown from "./Countdown";
 
@@ -99,7 +99,7 @@ const LandingPage = () => {
   };
 
   return (
-    <div className="flex flex-col container items-center justify-center">
+    <div className="w-full h-screen overflow-y-auto z-10 relative">
       <div className="w-full h-screen overflow-y-auto z-10 relative">
         <div className="flex flex-col items-center min-h-screen w-full z-10 relative mx-auto ">
           <div
