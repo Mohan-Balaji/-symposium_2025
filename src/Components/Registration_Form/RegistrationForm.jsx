@@ -25,11 +25,11 @@ export default function RegistrationForm() {
 
   const eventNames = {
     "1": "Code Heist",
-    "2": "Blind Coding",
+    "2": "Codetastic",
     "3": "DesignX",
-    "4": "ML-Based",
+    "4": "ML Showdown",
     "5": "VALORANT",
-    "6": "GAMEO",
+    "6": "GAMEO 2.0",
   };
 
   const whatsappLinks = {
@@ -88,7 +88,7 @@ export default function RegistrationForm() {
         teamName: "",
         teamMembers: ["", "", "", "", ""],
       });
-      navigate("/success"); // Redirect after successful registration
+      navigate(`/success?event=${formData.event}`); // Redirect after successful registration
     } catch (error) {
       console.error("Registration Failed:", error);
       alert("Registration Failed! Try Again.");
