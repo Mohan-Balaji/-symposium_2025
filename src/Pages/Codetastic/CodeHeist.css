@@ -1,0 +1,95 @@
+
+
+
+.wrapper {
+  width: 100%;
+  min-height: 100vh; /* Ensures content exceeds viewport */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 50px; /* Prevents content from hitting bottom */
+  z-index: 1; /* Content is above the background */
+}
+
+.title-card1 {
+  width: 80%; /* Adjusts width dynamically */
+  height: 1250px;
+  max-width: 1000px; /* Prevents it from becoming too wide */
+  flex-wrap: wrap;
+  border: 1px solid white;
+  margin: 50px auto;
+  background-color: rgba(0, 0, 0, 0.3);
+  box-shadow: inset -5px -5px rgba(0, 0, 0, 0.5);
+  border-radius: 25px;
+  position: relative;
+  z-index: 2; /* Title card stays above the background */
+  padding: 20px;
+}
+
+
+
+.sup-text {
+  
+  font-size: 50px;
+  padding: 10px;
+  color: white;
+  text-align: center;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+.heading-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.heading {
+  /* font-family: 'Press Start 2P', cursive; */
+  font-size: 20px;
+  color: beige;
+  padding-left: 10px;
+}
+
+h2 {
+  /* font-family: 'Press Start 2P', cursive; */
+  font-size: medium;
+  color: white;
+  padding-left: 10px;
+}
+/* Center only the button inside title-card */
+.register-btn-container {
+  display: flex;
+  justify-content: center; /* Centers the button horizontally */
+  width: 100%;
+  margin-top: 20px;
+}
+
+.register-btn {
+  background-color: #d770e4;
+  color: white;
+  padding: 15px 25px;
+  border: none;
+  border-radius: 10px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'Press Start 2P', cursive;
+  text-transform: uppercase;
+  box-shadow: 0 4px #a04cb3;
+}
+
+.register-btn:hover {
+  background-color: #e042e3;
+  box-shadow: 0 6px #8b1e3f;
+  transform: scale(1.05);
+}
+
+.register-btn.clicked {
+  background-color: #c732c2;
+  box-shadow: 0 2px #8b1e3f;
+  transform: scale(0.95);
+}
+
+
+
