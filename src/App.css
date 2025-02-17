@@ -7,9 +7,21 @@
 }
 
 @font-face {
-    font-family: 'Remaining';
+    font-family: 'remaining';
     font-weight: 900;
-    src: local('Remaining'), url(./assets/fonts/Remaining.otf) format('opentype');
+    src: local('remaining'), url(./assets/fonts/remaining.otf) format('opentype');
+}
+
+@font-face {
+    font-family: 'titleBold';
+    font-weight: 900;
+    src: local('titleBold'), url(./assets/fonts/titleBold.otf) format('opentype');
+}
+
+@font-face {
+    font-family: 'timer';
+    font-weight: 900;
+    src: local('timer'), url(./assets/fonts/timer.TTF) format('opentype');
 }
 
 
@@ -52,10 +64,10 @@ canvas {
     transition: 0.3s;
 }
 
-.title:hover {
+/* .title:hover {
     color: #ffdd57;
     text-shadow: 0 0 40px rgba(255, 221, 87, 1);
-}
+} */
 
 .spaceman {
     position: absolute;
@@ -99,6 +111,8 @@ canvas {
     box-shadow: 0 0 12px rgba(255, 255, 255, 0.5);
     z-index: 9999; /* Ensures it is on top */
 }
+
+
 
 /* Responsive Design */
 @media (max-width: 768px) {
