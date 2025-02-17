@@ -5,57 +5,27 @@ import Footer from "../Footer/Footer";
 
 const TCardList = () => {
   const cards1 = [
-    {
-      title: "WIN RAR",
-      description: "This is an interactive card with a cool hover effect.",
-      image:
-        "https://1.img-dpreview.com/files/p/TS250x250~sample_galleries/7568684162/1597952943.jpg",
-    },
-    {
-      title: "BLIND CODING",
-      description: "Clean design with animations and user-friendly features.",
-      image:
-        "https://1.img-dpreview.com/files/p/TS250x250~sample_galleries/7568684162/1597952943.jpg",
-    },
-    {
-      title: "LOGO DESIGNING",
-      description: "Built with smooth transitions and responsiveness.",
-      image:
-        "https://1.img-dpreview.com/files/p/TS250x250~sample_galleries/7568684162/1597952943.jpg",
-    },
-    {
-      title: "ML-BASED",
-      description: "Includes interactive elements for better UX.",
-      image:
-        "https://1.img-dpreview.com/files/p/TS250x250~sample_galleries/7568684162/1597952943.jpg",
-    },
+    { title: "WIN RAR", description: "This is an interactive card.", image: "https://1.img-dpreview.com/files/p/TS250x250~sample_galleries/7568684162/1597952943.jpg" },
+    { title: "BLIND CODING", description: "Clean design with animations.", image: "https://1.img-dpreview.com/files/p/TS250x250~sample_galleries/7568684162/1597952943.jpg" },
+    { title: "LOGO DESIGNING", description: "Smooth transitions and responsiveness.", image: "https://1.img-dpreview.com/files/p/TS250x250~sample_galleries/7568684162/1597952943.jpg" },
+    { title: "ML-BASED", description: "Interactive elements for better UX.", image: "https://1.img-dpreview.com/files/p/TS250x250~sample_galleries/7568684162/1597952943.jpg" },
   ];
 
   const cards2 = [
-    {
-      title: "VALORANT",
-      description: "This is an interactive card with a cool hover effect.",
-      image:
-        "https://1.img-dpreview.com/files/p/TS250x250~sample_galleries/7568684162/1597952943.jpg",
-    },
-    {
-      title: "GAMEO",
-      description: "Clean design with animations and user-friendly features.",
-      image:
-        "https://1.img-dpreview.com/files/p/TS250x250~sample_galleries/7568684162/1597952943.jpg",
-    },
+    { title: "VALORANT", description: "A fun gaming event.", image: "https://1.img-dpreview.com/files/p/TS250x250~sample_galleries/7568684162/1597952943.jpg" },
+    { title: "GAMEO", description: "Test your gaming skills!", image: "https://1.img-dpreview.com/files/p/TS250x250~sample_galleries/7568684162/1597952943.jpg" },
   ];
 
   return (
     <div className="w-full h-screen overflow-y-auto z-10 relative">
       <Background />
 
-      <div className="flex flex-col items-center justify-center min-h-screen w-full z-10 relative mx-auto px-12 py-20 pb-44 space-y-12">
+      <div className="flex flex-col items-center justify-center min-h-screen w-full z-10 relative mx-auto px-10 py-10 pb-44 gap-16">
         
         {/* Technical Events Section */}
-        <div className="flex flex-col items-center space-y-6 max-w-6xl w-full">
-          <h2 className="text-white text-8xl font-bold uppercase Remaing font-[Remaining]">Technical Events</h2>
-          <div className="grid grid-cols-2 gap-8 max-w-5xl z-20 rounded-3xl shadow-xl border border-gray-200 bg-white/10 backdrop-blur-lg p-8">
+        <div className="flex flex-col items-center space-y-6 w-full max-w-[80%] mx-auto">
+          <h2 className="text-white md:text-8xl font-bold uppercase font-[Remaining] text-6xl">Technical Events</h2>
+          <div className="grid place-items-center items-start grid-cols-1  sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 md:justify-between gap-y-7 w-full z-20  p-10 md:rounded-3xl md:shadow-xl md:border md:border-gray-200 md:bg-white/10 md:backdrop-blur-lg">
             {cards1.map((card, index) => (
               <TCard key={`tech-${index}`} img={card.image} title={card.title} description={card.description} />
             ))}
@@ -63,9 +33,9 @@ const TCardList = () => {
         </div>
 
         {/* Non-Technical Events Section */}
-        <div className="flex flex-col items-center space-y-6 max-w-6xl w-full">
-          <h2 className="text-white text-8xl font-bold uppercase font-[Remaining]">Non-Technical Events</h2>
-          <div className="grid grid-cols-2 gap-8 max-w-5xl z-20 rounded-3xl shadow-xl border border-gray-200 bg-white/10 backdrop-blur-lg p-8">
+        <div className="flex flex-col items-center space-y-6 w-full max-w-[80%] mx-auto">
+          <h2 className="text-white md:text-8xl font-bold uppercase font-[Remaining] text-5xl">Non-Technical Events</h2>
+          <div className="grid place-items-center grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2  md:justify-between gap-y-7 w-full z-20  p-10 md:rounded-3xl md:shadow-xl md:border md:border-gray-200 md:bg-white/10 md:backdrop-blur-lg">
             {cards2.map((card, index) => (
               <TCard key={`non-tech-${index}`} img={card.image} title={card.title} description={card.description} />
             ))}
@@ -73,7 +43,7 @@ const TCardList = () => {
         </div>
 
       </div>
-      <Footer/>
+      <Footer />
     </div>
   );
 };

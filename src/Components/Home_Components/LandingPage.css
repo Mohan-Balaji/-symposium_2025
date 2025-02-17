@@ -38,24 +38,10 @@ canvas {
 }
 
 .title:hover {
-    color: #64b5f6;
-    text-shadow: 0 0 40px rgba(168,66,150) ;
+    color: #ffd700;
+    text-shadow: 0 0 40px rgba(255,215,0) ;
 }
 
-
-/* College Name */
-.college-name {
-    font-size: 100px;
-    font-weight: bold;
-    color: white;
-    text-transform: uppercase;
-    z-index: 2;
-    font-family:'Remaining';
-
-
-}
-
-/* Department */
 .department {
     font-size: 45px;
     color: white;
@@ -68,14 +54,7 @@ canvas {
     color: #ffd700;
 }
 
-/* Presents */
-.presents {
-    font-size: 18px;
-    color: white;
-    z-index: 2;
-    
-    
-}
+
 
 
 .spaceman {
