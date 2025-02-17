@@ -41,7 +41,7 @@ body {
 }
 
 canvas {
-    display: block;
+    display:block;
     position: absolute;
     top: 0;
     left: 0;
@@ -112,6 +112,11 @@ canvas {
     z-index: 9999; /* Ensures it is on top */
 }
 
+.scroll-list_wrp{
+    overflow: auto;
+    background-image: linear-gradient(147deg,#2e3a59 0%,#1a2b46 74%);
+   
+}
 
 
 /* Responsive Design */
