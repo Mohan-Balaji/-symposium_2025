@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import { Link } from "react-router-dom";  // Import Link for routing
 import TCard from "./TCard";
 import Background from "../Background/Background";
 import Footer from "../Footer/Footer";
@@ -10,15 +11,15 @@ const TCardList = () => {
   const [refNonTech, inViewNonTech] = useInView({ triggerOnce: true, threshold: 0.2 });
 
   const cards1 = [
-    { title: "WIN RAR", description: "This is an interactive card.", image: "https://1.img-dpreview.com/files/p/TS250x250~sample_galleries/7568684162/1597952943.jpg" },
-    { title: "BLIND CODING", description: "Clean design with animations.", image: "https://1.img-dpreview.com/files/p/TS250x250~sample_galleries/7568684162/1597952943.jpg" },
-    { title: "LOGO DESIGNING", description: "Smooth transitions and responsiveness.", image: "https://1.img-dpreview.com/files/p/TS250x250~sample_galleries/7568684162/1597952943.jpg" },
-    { title: "ML-BASED", description: "Interactive elements for better UX.", image: "https://1.img-dpreview.com/files/p/TS250x250~sample_galleries/7568684162/1597952943.jpg" },
+    { title: "WIN RAR", description: "This is an interactive card.", image: "https://1.img-dpreview.com/files/p/TS250x250~sample_galleries/7568684162/1597952943.jpg", route: "/win-rar" },
+    { title: "BLIND CODING", description: "Clean design with animations.", image: "https://1.img-dpreview.com/files/p/TS250x250~sample_galleries/7568684162/1597952943.jpg", route: "/blind-coding" },
+    { title: "LOGO DESIGNING", description: "Smooth transitions and responsiveness.", image: "https://1.img-dpreview.com/files/p/TS250x250~sample_galleries/7568684162/1597952943.jpg", route: "/logo-designing" },
+    { title: "ML-BASED", description: "Interactive elements for better UX.", image: "https://1.img-dpreview.com/files/p/TS250x250~sample_galleries/7568684162/1597952943.jpg", route: "/ml-based" },
   ];
 
   const cards2 = [
-    { title: "VALORANT", description: "A fun gaming event.", image: "https://1.img-dpreview.com/files/p/TS250x250~sample_galleries/7568684162/1597952943.jpg" },
-    { title: "GAMEO", description: "Test your gaming skills!", image: "https://1.img-dpreview.com/files/p/TS250x250~sample_galleries/7568684162/1597952943.jpg" },
+    { title: "VALORANT", description: "A fun gaming event.", image: "https://1.img-dpreview.com/files/p/TS250x250~sample_galleries/7568684162/1597952943.jpg", route: "/valorant" },
+    { title: "GAMEO", description: "Test your gaming skills!", image: "https://1.img-dpreview.com/files/p/TS250x250~sample_galleries/7568684162/1597952943.jpg", route: "/gameo" },
   ];
 
   return (
@@ -36,7 +37,9 @@ const TCardList = () => {
           <div className="grid place-items-center items-start grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 md:justify-between gap-y-7 w-full z-20 p-10 md:rounded-3xl md:shadow-xl md:border md:border-gray-200 md:bg-white/10 md:backdrop-blur-lg">
             {cards1.map((card, index) => (
               <motion.div key={`tech-${index}`} whileHover={{ scale: 1.05, boxShadow: "0px 0px 20px rgba(255, 255, 255, 0.5)" }} transition={{ duration: 0.3 }}>
-                <TCard img={card.image} title={card.title} description={card.description} />
+                <Link to={card.route}>  {/* Link to the event's route */}
+                  <TCard img={card.image} title={card.title} description={card.description} />
+                </Link>
               </motion.div>
             ))}
           </div>
@@ -53,7 +56,9 @@ const TCardList = () => {
           <div className="grid place-items-center grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 md:justify-between gap-y-7 w-full z-20 p-10 md:rounded-3xl md:shadow-xl md:border md:border-gray-200 md:bg-white/10 md:backdrop-blur-lg">
             {cards2.map((card, index) => (
               <motion.div key={`non-tech-${index}`} whileHover={{ scale: 1.05, boxShadow: "0px 0px 20px rgba(255, 255, 255, 0.5)" }} transition={{ duration: 0.3 }}>
-                <TCard img={card.image} title={card.title} description={card.description} />
+                <Link to={card.route}> {/* Link to the event's route */}
+                  <TCard img={card.image} title={card.title} description={card.description} />
+                </Link>
               </motion.div>
             ))}
           </div>

@@ -8,9 +8,12 @@ import LandingPage from './Components/Home_Components/LandingPage'
 import RegistrationForm from "./Components/Registration_Form/RegistrationForm"
 import Contact from './Pages/Contact/Contact';
 import SuccessPage from './Components/Registration_Form/Registration_Success/SuccessPage';
-import TeamPage from './Components/Teams';
+import TeamPage from './Pages/Developers_Page/Teams';
 import Confirmation from './Pages/Contact/Confirmation';
-import CodeHeist from './Pages/Codetastic/CodeHeist';
+import CodeHeist from './Pages/Codetastic-NO/CodeHeist';
+import DesignX from "./Pages/DesignX/DesignX"
+import Mlshowdown from "./Pages/ML Showdown/Mlshowdown"
+import Codetastic from "./Pages/Codetastic/Codetastic";
 
 function App() {  
 
@@ -19,11 +22,9 @@ function App() {
   //   {/* <Navbar></Navbar>
   //   {/* <LandingPage/> }
   //   <TCardList/> */}
-
-  
-  //  </>
+  // //  </>
     <BrowserRouter>
-    <Navbar></Navbar>
+    <Navbar/>
     <Routes>
       <Route path="/" element={<LandingPage/>}></Route>
       <Route path="/events" element={<TCardList/>}></Route>
@@ -33,6 +34,9 @@ function App() {
       <Route path="/teams" element={<TeamPage/>}></Route>
       <Route path="/confirmation" element={<Confirmation/>}></Route>
       <Route path="/codeheist" element={<CodeHeist/>}></Route>
+      <Route path="/designx" element={<DesignX/>}></Route>
+      <Route path="/mlshowdown" element={<Mlshowdown/>}></Route>
+      <Route path="/codetastic" element={<Codetastic/>}></Route>
       
 
     </Routes>

@@ -1,5 +1,5 @@
 import React from "react";
-import Background from "./Background/Background";
+import Background from "../../Components/Background/Background";
 
 const teamData = [
   { name: "Mohan", role: "Frontend Developer", image: "https://1.img-dpreview.com/files/p/TS250x250~sample_galleries/7568684162/1597952943.jpg", linkedin: "https://linkedin.com/in/alice" },
@@ -10,6 +10,7 @@ const teamData = [
   { name: "Janani", role: "QA Tester", image: "https://1.img-dpreview.com/files/p/TS250x250~sample_galleries/7568684162/1597952943.jpg", linkedin: "https://linkedin.com/in/frank" },
   { name: "Dharshini", role: "Project Manager", image: "https://1.img-dpreview.com/files/p/TS250x250~sample_galleries/7568684162/1597952943.jpg", linkedin: "https://linkedin.com/in/grace" },
   { name: "Sai Shri", role: "Deployment Engineer", image: "https://1.img-dpreview.com/files/p/TS250x250~sample_galleries/7568684162/1597952943.jpg", linkedin: "https://linkedin.com/in/hank" },
+  { name: "Laxmi", role: "Deployment Engineer", image: "https://1.img-dpreview.com/files/p/TS250x250~sample_galleries/7568684162/1597952943.jpg", linkedin: "https://linkedin.com/in/hank" },
 ];
 
 const TeamPage = () => {

@@ -1,0 +1,95 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Lato', sans-serif;
+  min-height: 100vh; /* Ensures full height */
+  width: 100%;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.circle-gradient-bg {
+  position: absolute; /* Fixed behind content */
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 200vh; /* Ensures it covers more than just the viewport */
+  background: radial-gradient(circle, #8b1e3f, #2e1a47);
+  background-size: cover;
+  background-position: center;
+  z-index: -1; /* Keeps the background behind the content */
+}
+
+.wrapper {
+  width: 100%;
+  min-height: 100vh; /* Ensures content exceeds viewport */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 50px; /* Prevents content from hitting bottom */
+  z-index: 1; /* Content is above the background */
+}
+
+.title-card {
+  width: 80%; /* Adjusts width dynamically */
+  height: 1200px;
+  max-width: 1000px; /* Prevents it from becoming too wide */
+  border: 1px solid rgb(42, 3, 84);
+  margin: 50px auto;
+  background-color: rgba(0, 0, 0, 0.3);
+  box-shadow: inset -5px -5px rgba(0, 0, 0, 0.5);
+  border-radius: 25px;
+  position: relative;
+  z-index: 2; /* Title card stays above the background */
+  padding: 20px;
+}
+
+.box {
+  padding: 12px;
+  margin: 20px;
+  width: 65%;
+  border: none;
+  outline: none;
+  border-radius: 20px;
+  box-shadow: inset -3px -3px rgba(0, 0, 0, 0.5);
+  font-size: medium;
+}
+
+.sup-text {
+  font-family: 'Press Start 2P', serif;
+  font-size: 50px;
+  padding: 10px;
+  color: white;
+  text-align: center;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+.heading-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.heading {
+  font-family: 'Press Start 2P', serif;
+  font-size: 20px;
+  color: beige;
+  padding-left: 10px;
+}
+
+h2 {
+  font-family: 'Press Start 2P', serif;
+  font-size: medium;
+  color: white;
+  padding-left: 10px;
+}
+
+.footer{
+  font-family: 'Press Start 2P', serif;
+  font-size: 20px;
+  color: beige;
+  text-align: center;
+  
+}

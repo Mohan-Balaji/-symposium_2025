@@ -23,14 +23,14 @@ export default function RegistrationForm() {
     teamMembers: ["", "", "", "", ""],
   });
 
-  const eventNames = {
-    "1": "Code Heist",
-    "2": "Codetastic",
-    "3": "DesignX",
-    "4": "ML Showdown",
-    "5": "VALORANT",
-    "6": "GAMEO 2.0",
-  };
+ const eventNames = {
+  "1": "Code Heist",
+  "2": "Codetastic",
+  "3": "DesignX",
+  "4": "ML Showdown",
+  "5": "VALORANT",
+  "6": "GAMEO 2.0",
+};
 
   const whatsappLinks = {
     "1": "https://chat.whatsapp.com/Jmup91uysqWL7YzdMxvHhd",
@@ -101,12 +101,11 @@ export default function RegistrationForm() {
 
       <div className="flex flex-col items-center justify-center min-h-screen w-full z-10 relative mx-auto px-12 py-20 pb-44 space-y-12">
         <div
-          className="min-h-screen font-[Remaining] text-3xl flex items-center justify-center bg-cover bg-center"
+          className="min-h-screen font-[remaining] text-3xl flex items-center justify-center bg-cover bg-center"
           style={{ backgroundImage: "url('/mnt/data/image.png')" }}
         >
           <div className="max-w-md w-full p-6 bg-white/10 backdrop-blur-lg shadow-2xl rounded-xl border border-white/20">
-            <h2 className="text-white text-5xl mb-4 text-center">Event Registration</h2>
-
+          <h2 className="text-white text-7xl mb-4 text-center ">event registration</h2>
             <form onSubmit={handleSubmit}>
               <input type="text" name="name" value={formData.name} onChange={handleChange} placeholder="Student Name" required className="w-full p-2 mb-2 border rounded bg-white/20 text-white placeholder-white" />
               <input type="text" name="college" value={formData.college} onChange={handleChange} placeholder="College Name" required className="w-full p-2 mb-2 border rounded bg-white/20 text-white placeholder-white" />

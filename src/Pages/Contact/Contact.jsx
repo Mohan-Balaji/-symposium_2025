@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import { Client, Databases, ID } from "appwrite";
 import { useNavigate } from "react-router-dom";
-import Background from "../../Components/Background/Background"
+import Background from "../../Components/Background/Background";
 import Footer from "../../Components/Footer/Footer";
+
 const client = new Client()
   .setEndpoint("https://cloud.appwrite.io/v1") // Replace with your Appwrite endpoint
   .setProject("67ade4e40007694597b2"); // Replace with your Appwrite project ID
@@ -172,6 +173,43 @@ export default function Contact() {
                       {loading ? "Sending..." : "Send Message"}
                     </button>
                   </form>
+                </div>
+              </div>
+
+              {/* Student Coordinators Section */}
+              <div className="mt-12">
+                <h3 className="text-xl font-semibold text-center">Student Coordinators</h3>
+                <div className="grid grid-cols-2 md:grid-cols-3 gap-6 mt-6">
+                  <div className="bg-white p-4 shadow-lg rounded-md">
+                    <h4 className="font-bold text-lg">John Doe</h4>
+                    <p>Email: johndoe@email.com</p>
+                    <p>Phone: (555) 123-4567</p>
+                  </div>
+                  <div className="bg-white p-4 shadow-lg rounded-md">
+                    <h4 className="font-bold text-lg">Jane Smith</h4>
+                    <p>Email: janesmith@email.com</p>
+                    <p>Phone: (555) 234-5678</p>
+                  </div>
+                  <div className="bg-white p-4 shadow-lg rounded-md">
+                    <h4 className="font-bold text-lg">Michael Brown</h4>
+                    <p>Email: michaelbrown@email.com</p>
+                    <p>Phone: (555) 345-6789</p>
+                  </div>
+                  <div className="bg-white p-4 shadow-lg rounded-md">
+                    <h4 className="font-bold text-lg">Emily White</h4>
+                    <p>Email: emilywhite@email.com</p>
+                    <p>Phone: (555) 456-7890</p>
+                  </div>
+                  <div className="bg-white p-4 shadow-lg rounded-md">
+                    <h4 className="font-bold text-lg">David Johnson</h4>
+                    <p>Email: davidjohnson@email.com</p>
+                    <p>Phone: (555) 567-8901</p>
+                  </div>
+                  <div className="bg-white p-4 shadow-lg rounded-md">
+                    <h4 className="font-bold text-lg">Sarah Lee</h4>
+                    <p>Email: sarahlee@email.com</p>
+                    <p>Phone: (555) 678-9012</p>
+                  </div>
                 </div>
               </div>
             </div>

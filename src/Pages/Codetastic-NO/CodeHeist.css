@@ -3,6 +3,7 @@
 
 .wrapper {
   width: 100%;
+  height: 100%;
   min-height: 100vh; /* Ensures content exceeds viewport */
   display: flex;
   flex-direction: column;
@@ -18,7 +19,7 @@
   flex-wrap: wrap;
   border: 1px solid white;
   margin: 50px auto;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(255, 0, 0, 0.3);
   box-shadow: inset -5px -5px rgba(0, 0, 0, 0.5);
   border-radius: 25px;
   position: relative;
@@ -31,7 +32,7 @@
 .sup-text {
   
   font-size: 50px;
-  padding: 10px;
+  padding: 12px;
   color: white;
   text-align: center;
 }
@@ -58,12 +59,7 @@ h2 {
   padding-left: 10px;
 }
 /* Center only the button inside title-card */
-.register-btn-container {
-  display: flex;
-  justify-content: center; /* Centers the button horizontally */
-  width: 100%;
-  margin-top: 20px;
-}
+
 
 .register-btn {
   background-color: #d770e4;
