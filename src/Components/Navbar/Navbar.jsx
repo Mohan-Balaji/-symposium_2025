@@ -68,8 +68,8 @@ export default function Navbar() {
               </Link>
             </li>
             <li>
-              <Link to="/aboutus" onClick={handleNavLinkClick} className="block py-2 px-3 text-gray-200 rounded-sm hover:bg-purple-700 md:hover:bg-transparent md:border-0 md:hover:text-blue-300 md:p-0">
-                About
+              <Link to="/teams" onClick={handleNavLinkClick} className="block py-2 px-3 text-gray-200 rounded-sm hover:bg-purple-700 md:hover:bg-transparent md:border-0 md:hover:text-blue-300 md:p-0">
+                Teams
               </Link>
             </li>
           </ul>

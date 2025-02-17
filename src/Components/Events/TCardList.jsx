@@ -35,7 +35,7 @@ const TCardList = () => {
           <h2 className="text-white md:text-5xl font-bold uppercase font-[titleBold] text-2xl glow-title">Technical Events</h2>
           <div className="grid place-items-center items-start grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 md:justify-between gap-y-7 w-full z-20 p-10 md:rounded-3xl md:shadow-xl md:border md:border-gray-200 md:bg-white/10 md:backdrop-blur-lg">
             {cards1.map((card, index) => (
-              <motion.div key={`tech-${index}`} whileHover={{ scale: 1.05, boxShadow: "0px 0px 20px rgba(255, 255, 255, 0.5)" }} transition={{ duration: 0.3 }}>
+              <motion.div key={`tech-${index}`} whileHover={{ scale: 1.05, boxShadow: "0px 0px 20px rgba(255, 255, 255, 0.5)"}} transition={{ duration: 0.3 }}>
                 <TCard img={card.image} title={card.title} description={card.description} />
               </motion.div>
             ))}

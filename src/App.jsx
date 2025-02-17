@@ -8,6 +8,8 @@ import LandingPage from './Components/Home_Components/LandingPage'
 import RegistrationForm from "./Components/Registration_Form/RegistrationForm"
 import Contact from './Pages/Contact';
 import SuccessPage from './Components/Registration_Form/Registration_Success/SuccessPage';
+import TeamPage from './Components/Teams';
+
 function App() {
 
   return (
@@ -26,6 +28,8 @@ function App() {
       <Route path="/registration" element={<RegistrationForm/>}></Route>
       <Route path="/contact" element={<Contact/>}></Route>
       <Route path="/success" element={<SuccessPage/>}></Route>
+      <Route path="/teams" element={<TeamPage/>}></Route>
+      
 
     </Routes>
     </BrowserRouter>
