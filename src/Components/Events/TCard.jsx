@@ -2,13 +2,13 @@ import React from "react";
 import styled from "styled-components";
 
 const CardWrapper = styled.div`
-   
-  width: 380px;
-  height: 460px;
+  position: relative; /* Ensure it stays in the normal document flow */
+  width: 90vw;
+  max-width: 380px;
+  min-height: 460px;
   border-radius: 15px;
   padding: 1.5rem;
   background: white;
-  position: relative;
   display: flex;
   align-items: flex-end;
   transition: 0.4s ease-out;
@@ -16,7 +16,7 @@ const CardWrapper = styled.div`
   cursor: pointer;
 
   &:hover {
-    transform: translateY(20px);
+    transform: translateY(10px);
 
     &::before {
       opacity: 1;
@@ -60,14 +60,16 @@ const CardWrapper = styled.div`
     opacity: 0;
     transform: translateY(30px);
     transition: 0.5s;
+    text-align: center;
 
     h1 {
       margin: 0px;
+      font-size: 1.5rem;
     }
 
     p {
       letter-spacing: 1px;
-      font-size: 15px;
+      font-size: 14px;
       margin-top: 8px;
     }
 
@@ -75,17 +77,37 @@ const CardWrapper = styled.div`
       padding: 0.6rem;
       outline: none;
       border: none;
-      border-radius: 3px;
+      border-radius: 5px;
       background: white;
       color: black;
       font-weight: bold;
       cursor: pointer;
       transition: 0.4s ease;
+      width: 100%;
 
       &:hover {
         background: dodgerblue;
         color: white;
       }
+    }
+  }
+
+  /* Mobile Styles */
+  @media (max-width: 480px) {
+    min-height: 400px;
+    padding: 1rem;
+
+    .info h1 {
+      font-size: 1.2rem;
+    }
+
+    .info p {
+      font-size: 13px;
+    }
+
+    .info button {
+      font-size: 14px;
+      padding: 0.5rem;
     }
   }
 `;

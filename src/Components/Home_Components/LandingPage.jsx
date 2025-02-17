@@ -106,24 +106,14 @@ const LandingPage = () => {
     <div>
 
       {/* College Name */}
-      <div className="college-name flex flex-auto justify-center">R.M.D. ENGINEERING COLLEGE</div>
-      <div className="department flex justify-center">Department of &nbsp; <span className="highlight"> ARTIFICIAL INTELLIGENCE AND MACHINE LEARNING</span></div>
-      <div className="presents flex justify-center">Presents</div>
+      <div className="flex flex-auto justify-center sm:text-[100px] font-bold text-white uppercase z-20 font-[remaining] text-[50px]">R.M.D. ENGINEERING COLLEGE</div>
+      <div className="sm:text-[45px] text-white z-20 font-[remaining] flex justify-center text-[27px] p-3">Department of &nbsp; <span className="highlight"> ARTIFICIAL INTELLIGENCE AND MACHINE LEARNING</span></div>
+      <div className="sm:text-[18px] text-white z-20 flex justify-center p-10">Presents</div>
 
       {/* Centered AVINYA Text */}
       <div className="title flex-autojustify-center" onClick={exploreGalaxy}>
         AVINYAA<sup className="sup-text">'25</sup>
-      </div>
-
-      {/* Spaceman Floating */}
-      {/* <img
-        className="spaceman"
-        src={heroimg}
-        alt="Spaceman"
-      />
-      <div className="dialog">Click on AVINYAA<sup>25</sup> to explore!</div> */}
-     
-     
+      </div>     
       </div>
       </div>
     </div>
