@@ -1,0 +1,15 @@
+.title-card {
+    background: linear-gradient(135deg, #ff7eb3, #ff758c);
+    color: white;
+    padding: 30px 50px;
+    text-align: center;
+    font-size: 2rem;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 300px;
+    margin: 50px auto;
+    transition: all 0.3s ease-in-out;
+    
+  }
+  
+  
