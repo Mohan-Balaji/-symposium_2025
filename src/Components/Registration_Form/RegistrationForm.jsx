@@ -4,8 +4,8 @@ import { Client, Databases } from "appwrite";
 import Background from "../Background/Background";
 
 const client = new Client()
-  .setEndpoint("https://cloud.appwrite.io/v1")
-  .setProject("67ade4e40007694597b2");
+  .setEndpoint("YOURS_END_POINT")
+  .setProject("YOURS_END_POINT_KEY");
 
 const databases = new Databases(client);
 
@@ -33,12 +33,12 @@ export default function RegistrationForm() {
 };
 
   const whatsappLinks = {
-    "1": "https://chat.whatsapp.com/Jmup91uysqWL7YzdMxvHhd",
-    "2": "https://chat.whatsapp.com/event2",
-    "3": "https://chat.whatsapp.com/BtUSCnhW5xvDaN4A9cO0VN",
-    "4": "https://chat.whatsapp.com/LAveuuImGEOEPjjGgKyAC5",
-    "5": "https://chat.whatsapp.com/Gm9AeQd6qDLHH4Dh7tYXCq",
-    "6": "https://chat.whatsapp.com/HIreB8b8ZBwCOvzFFZO2xT",
+    "1": "GROUP1_LINK",
+    "2": "GROUP2_LINK",
+    "3": "GROUP3_LINK",
+    "4": "GROUP4_LINK",
+    "5": "GROUP5_LINK",
+    "6": "GROUP6_LINK",
   };
 
   const handleChange = (e) => {
@@ -59,8 +59,8 @@ export default function RegistrationForm() {
     e.preventDefault();
     try {
       await databases.createDocument(
-        "67ade576002feb5a7f7d",
-        "67ade58700196af6d8af",
+        "YOURS_END_POINT_KEY",
+        "YOURS_END_POINT_KEY",
         "unique()",
         {
           name: formData.name,
